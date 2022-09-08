@@ -1,6 +1,6 @@
 /** 
  *
- *  * main - entry point 
+ *  * main - entry point for the program 
  *
  *   * 
  *
