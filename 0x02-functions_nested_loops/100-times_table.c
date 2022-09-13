@@ -1,81 +1,199 @@
-#include <stdio.h>
+#include "main.h"
+
+
+
+void _print_values(int);
 
 
 
 /**
  *
- *  * main - finds and prints the first 98 fibonacci numbers
+ *  * print_times_table - prints nxn times table
  *
- *   * starting with 1 and 2
+ *   * @n: Maximum multiple of times table
  *
- *    * Return: Always o (Success)
+ *    *
  *
- *     */
+ *     * Description: This will print a times table
+ *
+ *      * formed by nxn multiplications. Where n can
+ *
+ *       * be any number from 0 to 15 .
+ *
+ *        * Return: Void
+ *
+ *         */
 
-int main(void)
+void print_times_table(int n)
 
 {
 
-		unsigned long int i, j, k, j1, j2, k1, k2;
+		if (n <= 15)
+
+				{
+
+							int i, j;
 
 
 
-			j = 1;
+									for (i = 0; i <= n; i++)
 
-				k = 2;
+												{
 
+																for (j = 0; j <= n; j++)
 
+																				{
 
-					printf("%lu", j);
-
-
-
-						for (i = 1; i < 91; i++)
-
-								{
-
-											printf(", %lu", k);
-
-													k += j;
-
-															j = k - j;
-
-																}
+																									int temp = i * j;
 
 
 
-							j1 = j / 1000000000;
+																													if (temp / 100)
 
-								j2 = j % 1000000000;
+																																		{
 
-									k1 = k / 1000000000;
+																																								_print_values(temp);
 
-										k2 = k % 1000000000;
+																																												}
+
+																																	else if (temp / 10)
+
+																																						{
+
+																																												if (j > 0)
+
+																																																		{
+
+																																																									_putchar(' ');
+
+																																																														}
+
+																																																	_print_values(temp);
+
+																																																					}
+
+																																					else
+
+																																										{
+
+																																																if (j > 0)
+
+																																																						{
+
+																																																													_putchar(' ');
+
+																																																																			_putchar(' ');
+
+																																																																								}
+
+																																																					_print_values(temp);
+
+																																																									}
 
 
 
-											for (i = 92; i < 99; ++i)
+																																									if (j < n)
 
-													{
+																																														{
 
-																printf(", %lu", k1 + (k2 / 1000000000));
+																																																				_putchar(',');
 
-																		printf("%lu", k2 % 1000000000);
+																																																									_putchar(' ');
 
-																				k1 += j1;
+																																																													}
 
-																						j1 = k1 - j1;
+																																												}
 
-																								k2 += j2;
+																			_putchar('\n');
 
-																										j2 = k2 - j2;
+																					}
 
-																											}
+										}
+
+}
 
 
 
-												printf("\n");
 
-													return (0);
+
+
+
+/**
+ *
+ *  * _print_values - prints numbers accurately
+ *
+ *   * @val: number to be parsed and printed
+ *
+ *    *
+ *
+ *     * Description: This function takes a number,
+ *
+ *      * parses that number and then prints it to the
+ *
+ *       * terminal. It can only parse and print numbers
+ *
+ *        * less than or up to three digits in length.
+ *
+ *         * Return: Void
+ *
+ *          */
+
+void _print_values(int val)
+
+{
+
+		if (val / 100)
+
+				{
+
+							int num1;
+
+									int num2;
+
+											int num3;
+
+
+
+													num1 = val / 100;
+
+															num2 = (val % 100) / 10;
+
+																	num3 = val % 10;
+
+																			_putchar('0' + num1);
+
+																					_putchar('0' + num2);
+
+																							_putchar('0' + num3);
+
+																								}
+
+			else if (val / 10)
+
+					{
+
+								int num1;
+
+										int num2;
+
+
+
+												num1 = val / 10;
+
+														num2 = val % 10;
+
+																_putchar('0' + num1);
+
+																		_putchar('0' + num2);
+
+																			}
+
+				else
+
+						{
+
+									_putchar('0' + val);
+
+										}
 
 }
