@@ -9,5 +9,3 @@ void print_remaining_days(int, int, int);
 int covert_day(int, int);
 
 #endif /* MAIN_H */
-^C
-chmod u+x main.h
