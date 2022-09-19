@@ -1,4 +1,4 @@
-nclude <string.h>
+#include <string.h>
 
 #include "main.h"
 
@@ -6,7 +6,7 @@ nclude <string.h>
 
 /**
  *
- *  * puts_half - print the last half of string
+ *  * puts_half - prints the last half of a string
  *
  *   * @s: pointer to the string variable s
  *
