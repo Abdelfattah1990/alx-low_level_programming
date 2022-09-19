@@ -3,7 +3,6 @@
 
 
 /**
- *
  *  * _strlen - returns the length
  *
  *   * @s: String whose length we want to determine
@@ -11,8 +10,7 @@
  *    *
  *
  *     * Return: length of String
- *
- *      */
+      */
 
 int _strlen(char *s)
 
@@ -28,9 +26,9 @@ int _strlen(char *s)
 
 					i = 0;
 
-						while (s[i] != '\0')
+	while (s[i] != '\0')
 
-								{
+	{
 
 											++length;
 

@@ -3,7 +3,6 @@
 
 
 /**
- *
  *  * swap_int - swaps the values of two integers
  *
  *   * @a: Pointer to the first integer variable
@@ -13,8 +12,7 @@
  *     *
  *
  *      * Return: void
- *
- *       */
+       */
 
 void swap_int(int *a, int *b)
 
