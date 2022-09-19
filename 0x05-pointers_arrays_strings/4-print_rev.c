@@ -1,89 +1,35 @@
-nclude "main.h"
+include <string.h>
 
-
-
-int get_length(char *);
-
-
-
-/**
- *
- *  * print_rev - prints a string to the screen 
- *
- *   * @s: String to be printed in reverse
- *
- *    *
- *
- *     * Return: void
- *
- *      */
-
-void print_rev(char *s)
-
-{
-
-		int length;
-
-			int i;
-
-
-
-				length = get_length(s);
-
-					for (i = length - 1; i >= 0; i--)
-
-							{
-
-										_putchar(s[i]);
-
-											}
-
-						_putchar('\n');
-
-}
-
-
+#include "main.h"
 
 
 
 /**
  *
- *  * get_length - returns the length of a String
+ *  * print_rev - prints string in reverse order
  *
- *   * @s: String whose length we want to determine
+ *   * @str: string to be reversed
  *
  *    *
  *
- *     * Return: Length of String
+ *     * Return: Null
  *
  *      */
 
-int get_length(char *s)
+void print_rev(char *str)
 
 {
 
-		int length;
-
-			int i;
+		int i, len = strlen(str);
 
 
 
-				length = 0;
+			for (i = len - 1; i >= 0; i--)
 
-					i = 0;
-
-						while (s[i] != '\0')
-
-								{
-
-											++length;
-
-													i++;
-
-														}
+						_putchar(str[i]);
 
 
 
-							return (length);
+				_putchar('\n');
 
 }
