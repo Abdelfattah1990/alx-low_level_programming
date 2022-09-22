@@ -25,21 +25,21 @@ last = n - 1;
 
 
 
-		for (i = 0; i < counts; i++)
+	for (i = 0; i < counts; i++)
 
-{
+	{
 
-keep = a[first];
+		keep = a[first];
 
-a[first] = a[last];
-
-
-a[last] = keep;
+		a[first] = a[last];
 
 
-first++;
+		a[last] = keep;
 
 
-last--;
+		first++;
+
+
+		last--;
 
 }
