@@ -1,44 +1,35 @@
 #include "main.h"
 
-
-
 /**
- * reverse_array - flips an array
- * @a: an arrat to be flipped
- * @n: number of elements in the array
- * Return: Null
+ * reverse_array - reverse the contents of an array
+ * @a: Pointer to the array
+ * @n: Number of elements in the array
+ * Return: void
  */
 
 void reverse_array(int *a, int n)
 
 {
 
-	int i, first, last, keep, counts;
+	int i;
+	int j;
 
+	i = 0;
+	j = n - 1;
 
-	counts = n / 2;
-
-	first = 0;
-
-	last = n - 1;
-
-
-
-	for (i = 0; i < counts; i++)
+	while (i < j)
 
 	{
 
-		keep = a[first];
+	int temp;
 
-		a[first] = a[last];
+		temp = a[i];
 
+		a[i] = a[j];
 
-		a[last] = keep;
+		a[j] = temp;
 
-
-		first++;
-
-
-		last--;
-
+		i++;
+		j--;
+	}
 }
