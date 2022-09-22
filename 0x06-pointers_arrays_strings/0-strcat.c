@@ -3,49 +3,40 @@
 
 
 /**
- *  * _strcat - concatenates one string to another
+ * _strcat - concatenates one string to another
+ * @dest: destination string
+ * @src: String to be concatenated
  *
- *   * @dest: destination string
- *
- *    * @src: String to be concatenated
- *
- *     *
- *
- *      * Return: The destination string
- *       */
-
+ * Return: The destination string
+ */
 char *_strcat(char *dest, char *src)
 
 {
 
-		int i;
+	int i;
 
-		int destLength = 0;
+	int destLength = 0;
 
-		int counter = 0;
+	int counter = 0;
 
 
 
-		while (dest[counter] != '\0')
+	while (dest[counter] != '\0')
 
 {
-
-										destLength++;
-
-												counter++;
-
-													}
+	destLength++;
+	counter++;
+										}
 
 
 
-		for (i = 0; src[i] != '\0'; i++)
+	for (i = 0; src[i] != '\0'; i++)
 
-		dest[destLength + i] = src[i];
-
-		dest[destLength + i] = '\0';
-
+	dest[destLength + i] = src[i];
+	dest[destLength + i] = '\0';
 
 
-return (dest);
+
+	return (dest);
 
 }
