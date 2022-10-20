@@ -1,5 +1,5 @@
 #include <stdio.h>
-void before_main(void) attribute((constructor));
+void before_main(void) __attribute__ ((constructor));
 
 
 /**
