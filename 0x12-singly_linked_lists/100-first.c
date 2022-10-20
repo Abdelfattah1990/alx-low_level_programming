@@ -1,20 +1,17 @@
-#include "lists.h"
-void print_first(void) attribute((constructor));
+#include <stdio.h>
+void first(void) attribute((constructor));
 
 
 /**
- * print_first - function to be executed before main()
- * Return: void
+ * before_main - Prints something before main
+ * Return: Null Void
  */
 
-void print_first(void)
+void before_main(void)
+
 
 {
-char *message1 = "You're beat! and yet, you must allow,\n";
-char *message2 = "I bore my house upon my back!\n";
-
-
-
-printf("%s%s", message1, message2);
+printf("You're beat! and yet, you must allow,\n");
+printf("I bore my house upon my back!\n");
 
 }
