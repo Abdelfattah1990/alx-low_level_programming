@@ -1,5 +1,5 @@
 #include "lists.h"
-
+void print_first(void) attribute((constructor));
 
 
 /**
